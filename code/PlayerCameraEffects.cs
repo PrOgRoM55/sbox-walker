@@ -89,11 +89,10 @@ public class PlayerCameraEffects : Component, IPlayerEvent, ILocalPlayerEvent
 		{
 			damping.Current = target;
 			damping.Target = 0;
-			damping.SmoothTime = time;
 			damping.Frequency = frequency;
 			damping.Damping = damp;
 
-			deathTime = damping.SmoothTime;
+			deathTime = time;
 		}
 
 		public override bool IsDone => deathTime <= 0;
